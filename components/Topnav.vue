@@ -1,10 +1,16 @@
 <template>
   <v-app-bar app color="grey accent-3" elevate-on-scroll elevation="3">
-    <v-app-bar-nav-icon @click="$emit('handleDrawer')"></v-app-bar-nav-icon>
+    <!-- <v-app-bar-nav-icon @click="$emit('handleDrawer')"></v-app-bar-nav-icon> -->
+    <h1 class="primary--text">INTRANET SITE</h1>
+    <v-spacer></v-spacer>
 
     <v-spacer></v-spacer>
- 
-    <v-spacer></v-spacer>
+    <div>
+      <v-btn class="mx-1" depressed> POSTS </v-btn>
+      <v-btn class="mx-1" depressed> PICTURES </v-btn>
+      <v-btn class="mx-1" depressed> VIDEOS </v-btn>
+      <v-btn class="mx-1" depressed> STORIES </v-btn>
+    </div>
     <v-menu offset-y>
       <template v-slot:activator="{ on, attrs }">
         <span
@@ -18,6 +24,7 @@
           </v-badge>
         </span>
       </template>
+
       <v-list three-line width="300">
         <template v-for="(item, index) in items">
           <v-subheader
@@ -47,6 +54,7 @@
         </template>
       </v-list>
     </v-menu>
+
     <v-menu offset-y>
       <template v-slot:activator="{ on, attrs }">
         <span
@@ -86,17 +94,6 @@
         </v-list-item>
       </v-list>
     </v-menu>
-    <v-btn icon>
-      <v-icon>mdi-magnify</v-icon>
-    </v-btn>
-
-    <v-btn icon>
-      <v-icon>mdi-heart</v-icon>
-    </v-btn>
-
-    <v-btn icon>
-      <v-icon>mdi-dots-vertical</v-icon>
-    </v-btn>
   </v-app-bar>
 </template>
 

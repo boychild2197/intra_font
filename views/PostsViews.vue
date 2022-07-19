@@ -1,28 +1,25 @@
 <template>
   <v-app>
     <Topnav @handleDrawer="drawer = !drawer" />
-    <!-- <Sidenav :drawer="drawer"/> -->
-    <v-content>
-    <PanelComponent  />
-    </v-content>
+    <!-- <Sidenav :drawer="drawer"/> -->xxczxcxc
+    <PostsComponent  />
+
     
   </v-app>
 </template>
 
 <script>
-import PanelComponent from '../components/PanelComponent.vue'
 import Topnav from '../components/Topnav.vue'
-import Sidenav from '../components/Sidenav.vue'
+import PostsComponent from '../components/StoriesComponent'
 export default {
-    name:"Panel",
+    name:"PostsViews",
     data: ()=> ({
         drawer: true
 
     }),
     components: {
-        PanelComponent,
         Topnav,
-        Sidenav
+        PostsComponent 
     }
 
 }

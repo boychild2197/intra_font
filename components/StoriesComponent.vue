@@ -30,16 +30,16 @@
       </v-col>
     </v-row>
     <v-row>
-      <v-col cols="4" v-for="(post, index) in posts" :key="index">
+      <v-col cols="4" v-for="(story, index) in stories" :key="index">
         <v-card class="mx-auto" max-width="400">
           <!-- <v-img class="white--text align-end" height="200px" :src="post.image"> -->
-            <v-card-title>{{ post.title }}</v-card-title>
+            <v-card-title>{{ story.title }}</v-card-title>
           <!-- </v-img> -->
 
           <v-card-subtitle class="pb-0"></v-card-subtitle>
 
           <v-card-text class="text--primary">
-            <div>{{ post.body }}</div>
+            <div>{{ story.body }}</div>
           </v-card-text>
 
           <v-card-actions>
@@ -56,7 +56,7 @@
 
 <script>
 export default {
-  name: "PostsComponent",
+  name: "StoriesComponent",
   data: () => ({
     colors: [
       "indigo",
@@ -99,6 +99,27 @@ export default {
         title: "Kidimbwi",
         body: "huku ni full bata asee, ni ku part hadi ku-party tena",
         image: "https://cdn.vuetifyjs.com/images/cards/docks.jpg",
+      },
+    ],
+    stories: [
+      {
+        title: "Kidimbwi",
+        body: "huku ni full bata asee, ni ku part hadi ku-party tena",
+    
+      },
+      {
+        title: "Kidimbwi",
+        body: "huku ni full bata asee, ni ku part hadi ku-party tena",
+
+      },
+      {
+        title: "Kidimbwi",
+        body: "huku ni full bata asee, ni ku part hadi ku-party tena"
+      },
+      {
+        title: "Kidimbwi",
+        body: "huku ni full bata asee, ni ku part hadi ku-party tena",
+
       },
     ],
   }),

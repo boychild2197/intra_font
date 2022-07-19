@@ -3,7 +3,9 @@ import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import Login from '../views/Login'
 import Panel from '../views/Panel'
-import PostsView from '../views/PostsView'
+import PostsViews from '../views/PostsViews'
+import StoriesView from '../views/StoriesView'
+import CreatePost from '../views/CreatePost'
 
 Vue.use(VueRouter)
 
@@ -24,10 +26,26 @@ const routes = [
     component: Panel
   },
   {
+    path: '/stories',
+    name: 'stories',
+    component: StoriesView
+  },
+  {
+    path: '/createstory',
+    name: 'createstory',
+    component: CreateStory
+  },
+  {
     path: '/posts',
     name: 'posts',
-    component: PostsView
+    component: PostsViews
   },
+  {
+    path: '/createpost',
+    name: 'createpost',
+    component: CreatePost
+  },
+
   
 ]
 

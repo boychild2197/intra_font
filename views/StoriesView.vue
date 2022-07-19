@@ -1,8 +1,8 @@
 <template>
   <v-app>
     <Topnav @handleDrawer="drawer = !drawer" />
-    <Sidenav :drawer="drawer"/>
-    <PostsComponent  />
+    <!-- <Sidenav :drawer="drawer"/> -->
+    <StoriesComponent  />
 
     
   </v-app>
@@ -10,8 +10,7 @@
 
 <script>
 import Topnav from '../components/Topnav.vue'
-import Sidenav from '../components/Sidenav.vue'
-import PostsComponent from '../components/PostsComponent'
+import StoriesComponent from '../components/StoriesComponent'
 export default {
     name:"PostsView",
     data: ()=> ({
@@ -20,8 +19,7 @@ export default {
     }),
     components: {
         Topnav,
-        Sidenav,
-        PostsComponent
+        StoriesComponent 
     }
 
 }
